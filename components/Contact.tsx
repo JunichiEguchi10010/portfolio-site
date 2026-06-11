@@ -1,0 +1,81 @@
+"use client";
+
+const consultationExamples = [
+  "毎月の集計作業を自動化したい",
+  "Excel・CSVの管理を整理したい",
+  "営業活動の記録や確認フローを見直したい",
+  "業務データを見やすい画面にしたい",
+];
+
+export default function Contact() {
+  return (
+    <section className="bg-white py-20" id="contact">
+      <div className="mx-auto max-w-container-max px-6">
+        <div className="grid gap-16 md:grid-cols-2">
+          <div className="flex flex-col justify-start">
+            <h2 className="mb-4 text-display-lg-mobile text-primary md:text-headline-md">
+              まずは今の業務をお聞かせください
+            </h2>
+            <p className="mb-6 text-body-md leading-relaxed text-[#2B3440]">
+              「具体的に何を頼めばいいか分からない」「現状を整理してほしい」という段階でも問題ありません。現在の業務内容や、手間に感じている作業を簡単にお聞かせください。
+            </p>
+            <p className="mb-4 text-label-md font-bold text-primary">
+              たとえば、こんなご相談から対応できます。
+            </p>
+            <ul className="space-y-4 text-body-md text-primary">
+              {consultationExamples.map((example) => (
+                <li key={example} className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary">check</span>
+                  <span>{example}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-xl border border-outline-variant/30 bg-[#F7FAFC] p-8 shadow-sm">
+            <form
+              className="space-y-6"
+              onSubmit={(event) => event.preventDefault()}
+            >
+              <div>
+                <label className="mb-2 block text-label-md text-primary">
+                  お名前 / 貴社名
+                </label>
+                <input
+                  className="w-full rounded-lg border border-outline-variant/50 bg-white px-4 py-3 text-body-md focus:border-primary focus:ring-0"
+                  placeholder="例：山田 太郎"
+                  type="text"
+                />
+              </div>
+              <div>
+                <label className="mb-2 block text-label-md text-primary">
+                  メールアドレス
+                </label>
+                <input
+                  className="w-full rounded-lg border border-outline-variant/50 bg-white px-4 py-3 text-body-md focus:border-primary focus:ring-0"
+                  placeholder="example@domain.com"
+                  type="email"
+                />
+              </div>
+              <div>
+                <label className="mb-2 block text-label-md text-primary">
+                  ご相談内容
+                </label>
+                <textarea
+                  className="w-full rounded-lg border border-outline-variant/50 bg-white px-4 py-3 text-body-md focus:border-primary focus:ring-0"
+                  placeholder="現在の課題や、相談したい事項を自由にご記入ください。"
+                  rows={4}
+                />
+              </div>
+              <button
+                className="w-full rounded-full bg-primary py-4 text-label-md font-bold text-on-primary shadow-sm transition-opacity hover:opacity-90"
+                type="submit"
+              >
+                送信する
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

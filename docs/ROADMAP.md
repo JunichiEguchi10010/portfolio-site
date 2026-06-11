@@ -53,6 +53,13 @@ URLをポートフォリオとして使用
 * 各セクションがページ上に仮表示される
 * コンポーネント構成が整理されている
 
+### Phase 2 実施メモ
+
+* 完成デザインHTMLを Header / Hero / Strengths / Services / Works / AutoScreenCaseStudy / ProcessPricing / Contact / Footer に分解した
+* `app/page.tsx` から各コンポーネントを完成デザインと同じ順番で読み込む構成にした
+* Noto Sans JP と Material Symbols を `layout.tsx` / `globals.css` で設定した
+* フォーム送信処理とスクロールスパイは未実装のまま
+
 ## Phase 3: デザイン再現
 
 * 完成デザインに合わせてPC表示を再現する
