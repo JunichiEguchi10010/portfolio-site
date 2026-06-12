@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main className="pt-16 md:pt-[72px]">
         <Hero />
         <Strengths />
         <Services />

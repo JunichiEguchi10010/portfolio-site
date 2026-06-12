@@ -7,11 +7,14 @@ const consultationExamples = [
   "業務データを見やすい画面にしたい",
 ];
 
+const inputClassName =
+  "w-full rounded-lg border border-outline-variant/50 bg-white px-4 py-3 text-body-md outline-none transition-colors placeholder:text-[#94a3b8] focus:border-primary focus:ring-0";
+
 export default function Contact() {
   return (
     <section className="bg-white py-20" id="contact">
       <div className="mx-auto max-w-container-max px-6">
-        <div className="grid gap-16 md:grid-cols-2">
+        <div className="grid items-start gap-16 md:grid-cols-2">
           <div className="flex flex-col justify-start">
             <h2 className="mb-4 text-display-lg-mobile text-primary md:text-headline-md">
               まずは今の業務をお聞かせください
@@ -24,8 +27,10 @@ export default function Contact() {
             </p>
             <ul className="space-y-4 text-body-md text-primary">
               {consultationExamples.map((example) => (
-                <li key={example} className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-primary">check</span>
+                <li key={example} className="flex items-start gap-3">
+                  <span className="material-symbols-outlined shrink-0 text-primary">
+                    check
+                  </span>
                   <span>{example}</span>
                 </li>
               ))}
@@ -37,31 +42,46 @@ export default function Contact() {
               onSubmit={(event) => event.preventDefault()}
             >
               <div>
-                <label className="mb-2 block text-label-md text-primary">
+                <label
+                  className="mb-2 block text-label-md text-primary"
+                  htmlFor="contact-name"
+                >
                   お名前 / 貴社名
                 </label>
                 <input
-                  className="w-full rounded-lg border border-outline-variant/50 bg-white px-4 py-3 text-body-md focus:border-primary focus:ring-0"
+                  className={inputClassName}
+                  id="contact-name"
+                  name="name"
                   placeholder="例：山田 太郎"
                   type="text"
                 />
               </div>
               <div>
-                <label className="mb-2 block text-label-md text-primary">
+                <label
+                  className="mb-2 block text-label-md text-primary"
+                  htmlFor="contact-email"
+                >
                   メールアドレス
                 </label>
                 <input
-                  className="w-full rounded-lg border border-outline-variant/50 bg-white px-4 py-3 text-body-md focus:border-primary focus:ring-0"
+                  className={inputClassName}
+                  id="contact-email"
+                  name="email"
                   placeholder="example@domain.com"
                   type="email"
                 />
               </div>
               <div>
-                <label className="mb-2 block text-label-md text-primary">
+                <label
+                  className="mb-2 block text-label-md text-primary"
+                  htmlFor="contact-message"
+                >
                   ご相談内容
                 </label>
                 <textarea
-                  className="w-full rounded-lg border border-outline-variant/50 bg-white px-4 py-3 text-body-md focus:border-primary focus:ring-0"
+                  className={`${inputClassName} resize-none`}
+                  id="contact-message"
+                  name="message"
                   placeholder="現在の課題や、相談したい事項を自由にご記入ください。"
                   rows={4}
                 />

@@ -39,7 +39,7 @@ export default function ProcessPricing() {
             必要なところから、小さく仕組みにしていきます。
           </p>
         </div>
-        <div className="grid gap-16 md:grid-cols-2">
+        <div className="grid items-start gap-16 md:grid-cols-2">
           <div className="space-y-8">
             <h3 className="border-b border-outline-variant/30 pb-2 text-headline-sm text-primary">
               導入までの流れ
@@ -47,12 +47,14 @@ export default function ProcessPricing() {
             <div className="space-y-6">
               {steps.map((step) => (
                 <div key={step.number} className="flex gap-4">
-                  <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary text-label-md font-bold text-on-primary">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-label-md font-bold text-on-primary">
                     {step.number}
                   </span>
                   <div>
                     <p className="mb-1 font-bold text-primary">{step.title}</p>
-                    <p className="text-body-md text-[#2B3440]">{step.description}</p>
+                    <p className="text-body-md text-[#2B3440]">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -62,15 +64,17 @@ export default function ProcessPricing() {
             <h3 className="border-b border-outline-variant/30 pb-2 text-headline-sm text-primary">
               費用の目安
             </h3>
-            <div className="rounded-xl border border-outline-variant/30 bg-[#E6EDF5] p-8">
+            <div className="rounded-xl border border-outline-variant/30 bg-[#E6EDF5] p-8 shadow-sm">
               <ul className="mb-6 space-y-4">
                 {pricing.map((item) => (
                   <li
                     key={item.label}
-                    className="flex items-center justify-between border-b border-outline-variant/30 pb-2"
+                    className="flex items-center justify-between gap-4 border-b border-outline-variant/30 pb-2"
                   >
                     <span className="text-body-md text-primary">{item.label}</span>
-                    <span className="text-headline-sm text-primary">{item.price}</span>
+                    <span className="shrink-0 text-headline-sm text-primary">
+                      {item.price}
+                    </span>
                   </li>
                 ))}
               </ul>
