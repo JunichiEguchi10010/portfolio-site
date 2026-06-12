@@ -106,6 +106,12 @@ URLをポートフォリオとして使用
 * 問い合わせが送信できる
 * 入力欄がスマホでも使いやすい
 
+### Phase 5 実施メモ
+
+* Resend + Next.js API Route（`/api/contact`）で問い合わせフォーム送信を実装した
+* 環境変数は `RESEND_API_KEY` / `CONTACT_TO_EMAIL` / `CONTACT_FROM_EMAIL` をサーバー側で使用する
+* API Keyはコードやdocsに直書きせず、`.env.example` のみリポジトリに含める
+
 ## Phase 6: 公開
 
 * GitHubへpushする
