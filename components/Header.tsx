@@ -1,14 +1,14 @@
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 z-50 flex h-16 w-full items-center border-b border-outline-variant/30 bg-white/95 px-6 backdrop-blur-sm md:h-[72px]">
-      <div className="mx-auto flex w-full max-w-container-max items-center justify-between">
+    <header className="fixed top-0 left-0 z-50 flex h-16 w-full items-center border-b border-outline-variant/30 bg-white/95 px-4 backdrop-blur-sm sm:px-6 md:h-[72px]">
+      <div className="mx-auto flex w-full max-w-container-max items-center justify-between gap-3">
         <a
-          className="shrink-0 text-body-lg font-bold text-primary"
+          className="min-w-0 flex-1 text-[13px] font-bold leading-snug text-primary sm:text-[15px] md:flex-none md:text-body-lg"
           href="#"
         >
           江口純一｜業務改善・自動化支援
         </a>
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden shrink-0 items-center gap-8 md:flex">
           <a
             className="whitespace-nowrap text-label-md text-[#64717D] transition-colors hover:text-primary"
             href="#strengths"
@@ -42,7 +42,7 @@ export default function Header() {
         </nav>
         <button
           aria-label="メニューを開く"
-          className="text-primary md:hidden"
+          className="shrink-0 text-primary md:hidden"
           type="button"
         >
           <span className="material-symbols-outlined">menu</span>

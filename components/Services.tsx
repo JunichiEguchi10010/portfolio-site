@@ -5,7 +5,7 @@ export default function Services() {
       description: (
         <>
           ヒアリングを通じ、ボトルネックを特定。
-          <br />
+          <br className="hidden sm:inline" />
           最短距離で成果を出すための実行計画を策定します。
         </>
       ),
@@ -15,7 +15,7 @@ export default function Services() {
       description: (
         <>
           散在するデータを集約し、意思決定に使える形へ整えます。
-          <br />
+          <br className="hidden sm:inline" />
           Excelから専用ツールまで柔軟に対応します。
         </>
       ),
@@ -25,7 +25,7 @@ export default function Services() {
       description: (
         <>
           ルーチン業務をプログラミングで自動化し、
-          <br />
+          <br className="hidden sm:inline" />
           属人化しやすい作業を、継続して回る仕組みに整えます。
         </>
       ),
@@ -40,18 +40,18 @@ export default function Services() {
   ];
 
   return (
-    <section className="bg-white py-section-gap-md" id="services">
-      <div className="mx-auto max-w-container-max px-6">
-        <div className="grid items-start gap-16 md:grid-cols-2">
-          <div>
-            <h2 className="mb-8 text-display-lg-mobile text-primary md:text-headline-md">
+    <section className="bg-white py-12 md:py-section-gap-md" id="services">
+      <div className="mx-auto max-w-container-max px-4 sm:px-6">
+        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-16">
+          <div className="min-w-0">
+            <h2 className="mb-6 text-display-lg-mobile text-primary md:mb-8 md:text-headline-md">
               提供できること
             </h2>
-            <div className="space-y-10">
+            <div className="space-y-8 md:space-y-10">
               {services.map((service) => (
                 <div key={service.title} className="flex gap-4">
                   <div className="mt-3 h-2 w-2 shrink-0 rounded-full bg-primary" />
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="mb-2 text-headline-sm text-primary">
                       {service.title}
                     </h4>
@@ -63,11 +63,11 @@ export default function Services() {
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 gap-3 sm:gap-4">
             {highlights.map((item) => (
               <div
                 key={item.title}
-                className="rounded-lg border-l-4 border-primary bg-[#F5F7FA] p-6 shadow-sm"
+                className="rounded-lg border-l-4 border-primary bg-[#F5F7FA] p-5 shadow-sm md:p-6"
               >
                 <p className="text-headline-sm text-primary">{item.title}</p>
                 <p className="mt-1 text-label-sm text-[#64717D]">{item.label}</p>

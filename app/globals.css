@@ -106,6 +106,12 @@
   font-weight: var(--text-label-sm--font-weight);
 }
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   font-family: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
   color: #2b3440;

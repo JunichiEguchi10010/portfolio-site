@@ -22,15 +22,15 @@ export default function Strengths() {
 
   return (
     <section
-      className="border-y border-outline-variant/20 py-section-gap-md"
+      className="border-y border-outline-variant/20 py-12 md:py-section-gap-md"
       id="strengths"
       style={{
         background:
           "linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(238, 243, 248) 100%)",
       }}
     >
-      <div className="mx-auto max-w-container-max px-6">
-        <div className="mb-12 text-center">
+      <div className="mx-auto max-w-container-max px-4 sm:px-6">
+        <div className="mb-8 text-center md:mb-12">
           <h2 className="mb-3 text-display-lg-mobile text-primary md:text-headline-md">
             私の強み
           </h2>
@@ -38,16 +38,18 @@ export default function Strengths() {
             20年のキャリアで培った現場感覚と構造化スキルで、実効性のある改善を提案します。
           </p>
         </div>
-        <div className="grid gap-gutter md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-gutter">
           {cards.map((card) => (
             <div
               key={card.title}
-              className="flex h-full flex-col rounded-xl border border-outline-variant/30 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+              className="flex h-full flex-col rounded-xl border border-outline-variant/30 bg-white p-6 shadow-sm transition-shadow hover:shadow-md md:p-8"
             >
-              <span className="material-symbols-outlined mb-4 block text-[32px] leading-none text-primary">
+              <span className="material-symbols-outlined mb-3 block text-[28px] leading-none text-primary md:mb-4 md:text-[32px]">
                 {card.icon}
               </span>
-              <h3 className="mb-4 text-headline-sm text-primary">{card.title}</h3>
+              <h3 className="mb-3 text-headline-sm text-primary md:mb-4">
+                {card.title}
+              </h3>
               <p className="flex-1 text-body-md leading-relaxed text-[#2B3440]">
                 {card.description}
               </p>

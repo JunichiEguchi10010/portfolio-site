@@ -8,14 +8,14 @@ const consultationExamples = [
 ];
 
 const inputClassName =
-  "w-full rounded-lg border border-outline-variant/50 bg-white px-4 py-3 text-body-md outline-none transition-colors placeholder:text-[#94a3b8] focus:border-primary focus:ring-0";
+  "box-border w-full max-w-full rounded-lg border border-outline-variant/50 bg-white px-4 py-3 text-body-md outline-none transition-colors placeholder:text-[#94a3b8] focus:border-primary focus:ring-0";
 
 export default function Contact() {
   return (
-    <section className="bg-white py-20" id="contact">
-      <div className="mx-auto max-w-container-max px-6">
-        <div className="grid items-start gap-16 md:grid-cols-2">
-          <div className="flex flex-col justify-start">
+    <section className="bg-white py-12 md:py-20" id="contact">
+      <div className="mx-auto max-w-container-max px-4 sm:px-6">
+        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-16">
+          <div className="flex min-w-0 flex-col justify-start">
             <h2 className="mb-4 text-display-lg-mobile text-primary md:text-headline-md">
               まずは今の業務をお聞かせください
             </h2>
@@ -36,9 +36,9 @@ export default function Contact() {
               ))}
             </ul>
           </div>
-          <div className="rounded-xl border border-outline-variant/30 bg-[#F7FAFC] p-8 shadow-sm">
+          <div className="min-w-0 rounded-xl border border-outline-variant/30 bg-[#F7FAFC] p-5 shadow-sm sm:p-6 md:p-8">
             <form
-              className="space-y-6"
+              className="space-y-5 md:space-y-6"
               onSubmit={(event) => event.preventDefault()}
             >
               <div>
@@ -87,7 +87,7 @@ export default function Contact() {
                 />
               </div>
               <button
-                className="w-full rounded-full bg-primary py-4 text-label-md font-bold text-on-primary shadow-sm transition-opacity hover:opacity-90"
+                className="w-full max-w-full rounded-full bg-primary py-4 text-label-md font-bold text-on-primary shadow-sm transition-opacity hover:opacity-90"
                 type="submit"
               >
                 送信する

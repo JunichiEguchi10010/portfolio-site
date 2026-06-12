@@ -15,10 +15,10 @@ const features = [
 
 export default function AutoScreenCaseStudy() {
   return (
-    <section className="bg-white py-section-gap-md">
-      <div className="mx-auto max-w-container-max px-6">
-        <div className="flex flex-col items-center gap-12 rounded-xl bg-primary p-8 text-on-primary shadow-lg md:flex-row md:items-center md:p-16">
-          <div className="space-y-6 md:w-1/2">
+    <section className="bg-white py-12 md:py-section-gap-md">
+      <div className="mx-auto max-w-container-max px-4 sm:px-6">
+        <div className="flex flex-col items-stretch gap-8 rounded-xl bg-primary p-6 text-on-primary shadow-lg sm:p-8 md:flex-row md:items-center md:gap-12 md:p-16">
+          <div className="min-w-0 space-y-5 md:w-1/2 md:space-y-6">
             <span className="inline-block border border-on-primary px-3 py-1 text-label-md">
               Case Study: AUTO_SCREEN
             </span>
@@ -30,7 +30,7 @@ export default function AutoScreenCaseStudy() {
             <p className="text-body-md leading-relaxed opacity-90">
               AUTO_SCREENは、日次データの取得、指標計算、ランキング生成、初動感知、UI表示までを一貫して行う自作システムです。単なる一覧表ではなく、毎日の確認作業や判断を支援するために、見やすさと運用しやすさを重視して改善を続けています。
             </p>
-            <div className="grid grid-cols-1 gap-x-6 gap-y-3 pt-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-y-3 pt-2 md:grid-cols-2 md:gap-x-6 md:pt-4">
               {features.map((feature) => (
                 <div key={feature} className="flex items-start gap-2">
                   <span className="material-symbols-outlined shrink-0 text-[20px] text-primary-fixed">
@@ -40,11 +40,11 @@ export default function AutoScreenCaseStudy() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-label-sm italic text-[#64717D]">
+            <p className="text-label-sm italic text-[#64717D] md:mt-6">
               この経験をもとに、業務データを整理し、判断しやすい画面や自動化ツールとして形にする支援ができます。
             </p>
           </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-on-primary/20 shadow-2xl md:aspect-auto md:h-[360px] md:w-1/2">
+          <div className="relative aspect-[4/3] w-full min-w-0 overflow-hidden rounded-xl border border-on-primary/20 shadow-2xl md:aspect-auto md:h-[360px] md:w-1/2">
             {/* Phase 3以降で public/images に差し替え予定 */}
             <Image
               alt="実務向けダッシュボードUI"
