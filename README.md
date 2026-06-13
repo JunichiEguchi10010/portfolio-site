@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# portfolio-site
 
-## Getting Started
+業務改善・データ活用・AI活用支援の実績を伝えるポートフォリオLPです。完成済みデザインを Next.js + TypeScript + Tailwind CSS で再現し、問い合わせフォームから Resend 経由でメール送信できる構成になっています。
 
-First, run the development server:
+AUTO_SCREEN は投資助言ツールではなく、大量データの整理・候補抽出・日次運用を支援する**判断支援システム**として紹介しています。本リポジトリには AUTO_SCREEN の実データ、APIキー、個人情報、その他の秘匿情報は含みません。
+
+## 技術スタック
+
+| 分類 | 技術 |
+| --- | --- |
+| Framework | Next.js（App Router） |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| UI | React Components |
+| Email | Resend（`/api/contact`） |
+| Hosting | Vercel（公開予定） |
+| Version Control | Git / GitHub |
+
+詳細は [docs/TECH_STACK.md](docs/TECH_STACK.md) を参照してください。
+
+## セットアップ
+
+```bash
+git clone <repository-url>
+cd portfolio-site
+npm install
+cp .env.example .env.local
+```
+
+`.env.local` に必要な環境変数を設定したうえで、開発サーバーを起動します。
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いて確認してください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 環境変数
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+実際の値は `.env.local` に設定し、Git 管理しません。変数名のみ以下に記載します。
 
-## Learn More
+| 変数名 | 用途 |
+| --- | --- |
+| `RESEND_API_KEY` | Resend API の認証キー |
+| `CONTACT_TO_EMAIL` | 問い合わせの送信先メールアドレス |
+| `CONTACT_FROM_EMAIL` | 問い合わせ送信時の差出人メールアドレス |
 
-To learn more about Next.js, take a look at the following resources:
+テンプレートは [.env.example](.env.example) を参照してください。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 開発コマンド
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run dev    # 開発サーバー起動
+npm run build  # 本番ビルド
+npm run start  # 本番サーバー起動
+npm run lint   # ESLint 実行
+```
 
-## Deploy on Vercel
+## 公開
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+本番公開は **Vercel** を予定しています。GitHub リポジトリと Vercel プロジェクトを接続し、Vercel の環境変数に上記3つの変数を設定してください。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+実装方針やロードマップは [docs/](docs/) を参照してください。

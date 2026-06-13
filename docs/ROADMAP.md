@@ -123,3 +123,14 @@ URLをポートフォリオとして使用
 
 * VercelのURLでポートフォリオが見られる
 * URLをプロフィールや提案文に使える
+
+### Phase 6 公開準備メモ
+
+* ローカルで `git status` が clean であることを確認した
+* `npm run lint` は既存の `layout.tsx` フォント警告1件のみで、エラーなし
+* `npm run build` は成功（`/` 静的、`/api/contact` 動的）
+* `.env.local` は `.gitignore` により Git 管理対象外、`.env.example` はリポジトリに含める
+* `README.md` をポートフォリオ向けに更新（概要、技術スタック、セットアップ、環境変数、公開予定）
+* 実際の `git push` と Vercel 接続は人間が管理画面・CLIで実施する
+* Vercel 本番環境には `RESEND_API_KEY` / `CONTACT_TO_EMAIL` / `CONTACT_FROM_EMAIL` を設定する
+* 公開後は PC・タブレット・スマホ表示、問い合わせフォーム送信、秘匿情報の非掲載を人間側で最終確認する
