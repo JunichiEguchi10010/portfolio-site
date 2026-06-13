@@ -11,11 +11,16 @@ type ContactPayload = {
 };
 
 export async function POST(request: Request) {
-  const apiKey = process.env.RESEND_API_KEY;
-  const toEmail = process.env.CONTACT_TO_EMAIL;
-  const fromEmail = process.env.CONTACT_FROM_EMAIL;
+  const apiKey = process.env.RESEND_API_KEY?.trim();
+  const toEmail = process.env.CONTACT_TO_EMAIL?.trim();
+  const fromEmail = process.env.CONTACT_FROM_EMAIL?.trim();
 
   if (!apiKey || !toEmail || !fromEmail) {
+    console.error("Contact API config missing:", {
+      hasResendApiKey: Boolean(apiKey),
+      hasContactToEmail: Boolean(toEmail),
+      hasContactFromEmail: Boolean(fromEmail),
+    });
     return NextResponse.json(
       {
         ok: false,
@@ -92,7 +97,7 @@ ${trimmedMessage}
   const resend = new Resend(apiKey);
 
   try {
-    const { error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: toEmail,
       replyTo: trimmedEmail,
@@ -101,6 +106,7 @@ ${trimmedMessage}
     });
 
     if (error) {
+      console.error("Resend send error:", JSON.stringify(error));
       return NextResponse.json(
         {
           ok: false,
@@ -111,8 +117,13 @@ ${trimmedMessage}
       );
     }
 
+    console.log("Resend send success:", { id: data?.id });
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(
+      "Contact API unexpected error:",
+      error instanceof Error ? error.message : error,
+    );
     return NextResponse.json(
       {
         ok: false,
