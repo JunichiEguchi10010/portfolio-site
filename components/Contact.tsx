@@ -55,7 +55,7 @@ export default function Contact() {
       form.reset();
       setStatusMessage({
         type: "success",
-        text: "お問い合わせを送信しました。ご連絡ありがとうございます。",
+        text: "お問い合わせを受け付けました。\n内容を確認のうえ、2営業日以内にご連絡いたします。\nお問い合わせありがとうございました。",
       });
     } catch {
       setStatusMessage({
@@ -159,7 +159,7 @@ export default function Contact() {
               {statusMessage ? (
                 <p
                   aria-live="polite"
-                  className={`text-body-md ${
+                  className={`whitespace-pre-line text-body-md ${
                     statusMessage.type === "success"
                       ? "text-primary"
                       : "text-[#ba1a1a]"
