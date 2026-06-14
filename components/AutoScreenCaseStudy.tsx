@@ -23,7 +23,7 @@ export default function AutoScreenCaseStudy() {
               Case Study: AUTO_SCREEN
             </span>
             <h2 className="text-display-lg-mobile leading-tight md:text-display-lg">
-              実務に即したデータ活用を、
+              実務に即したデータを、
               <br />
               日々の判断に使える形へ。
             </h2>

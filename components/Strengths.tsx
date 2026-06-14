@@ -39,7 +39,7 @@ export default function Strengths() {
           {cards.map((card) => (
             <div
               key={card.title}
-              className="flex h-full flex-col rounded-xl border-2 border-transparent bg-[#F8FAFC] p-6 shadow-sm transition-all hover:border-primary-blue/20 hover:bg-white hover:shadow-md md:p-8"
+              className="flex h-full flex-col rounded-xl border-2 border-transparent bg-[#F8FAFC] p-6 shadow-sm md:p-8"
             >
               <span className="material-symbols-outlined mb-3 block text-[28px] leading-none text-primary-blue md:mb-4 md:text-[32px]">
                 {card.icon}

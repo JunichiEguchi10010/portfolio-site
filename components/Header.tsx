@@ -23,15 +23,15 @@ export default function Header() {
           </a>
           <a
             className="whitespace-nowrap text-label-md font-medium text-[#4A5568] transition-colors hover:text-primary-blue"
-            href="#process-pricing"
-          >
-            ご相談の流れ
-          </a>
-          <a
-            className="whitespace-nowrap text-label-md font-medium text-[#4A5568] transition-colors hover:text-primary-blue"
             href="#works"
           >
             制作実績
+          </a>
+          <a
+            className="whitespace-nowrap text-label-md font-medium text-[#4A5568] transition-colors hover:text-primary-blue"
+            href="#process-pricing"
+          >
+            ご相談の流れ
           </a>
           <a
             className="inline-flex items-center rounded-full bg-primary px-6 py-2 text-label-md font-bold text-on-primary shadow-sm transition-all hover:bg-primary/90"
