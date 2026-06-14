@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-outline-variant/30 bg-white px-4 py-8 sm:px-6 md:py-12">
+    <footer className="w-full border-t border-outline-variant bg-white px-4 py-10 sm:px-6 md:py-12">
       <div className="mx-auto flex max-w-container-max flex-col items-center justify-between gap-6 md:flex-row md:items-center md:gap-8">
         <div className="flex flex-col items-center gap-2 text-center md:items-start md:text-left">
           <span className="text-body-md font-bold text-primary md:text-body-lg">
@@ -12,13 +12,13 @@ export default function Footer() {
         </div>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-8">
           <a
-            className="text-label-sm text-[#2B3440] transition-colors hover:text-primary"
+            className="text-label-sm font-medium text-primary transition-colors hover:text-primary-blue"
             href="#"
           >
             プライバシーポリシー
           </a>
           <a
-            className="text-label-sm text-[#2B3440] transition-colors hover:text-primary"
+            className="text-label-sm font-medium text-primary transition-colors hover:text-primary-blue"
             href="#"
           >
             利用規約

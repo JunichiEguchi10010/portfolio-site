@@ -25,15 +25,16 @@ const pricing = [
 export default function ProcessPricing() {
   return (
     <section
-      className="border-t border-outline-variant/20 bg-[#F7FAFC] py-12 md:py-section-gap-md"
+      className="border-t border-outline-variant/30 bg-white py-14 md:py-24"
       id="process-pricing"
     >
       <div className="mx-auto max-w-container-max px-4 sm:px-6">
-        <div className="mb-8 text-center md:mb-12">
-          <h2 className="mb-4 text-display-lg-mobile text-primary md:text-headline-md">
+        <div className="mb-10 text-center md:mb-12">
+          <h2 className="text-display-lg-mobile text-primary md:text-headline-md">
             ご相談から導入まで
           </h2>
-          <p className="mx-auto max-w-2xl text-body-md text-[#2B3440]">
+          <div className="mx-auto mt-3 mb-6 h-[2px] w-10 bg-accent-greige" />
+          <p className="mx-auto max-w-2xl text-body-md font-medium text-[#2D3748]">
             現在の業務内容や手作業の流れをお聞きし、改善できる部分を一緒に整理します。
             <br className="hidden sm:inline" />
             必要なところから、小さく仕組みにしていきます。
@@ -41,18 +42,20 @@ export default function ProcessPricing() {
         </div>
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-16">
           <div className="space-y-6 md:space-y-8">
-            <h3 className="border-b border-outline-variant/30 pb-2 text-headline-sm text-primary">
+            <h3 className="border-b-2 border-primary pb-2 text-headline-sm text-primary">
               導入までの流れ
             </h3>
             <div className="space-y-5 md:space-y-6">
               {steps.map((step) => (
                 <div key={step.number} className="flex gap-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-label-md font-bold text-on-primary">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-label-md font-bold text-on-primary shadow-sm">
                     {step.number}
                   </span>
                   <div className="min-w-0">
-                    <p className="mb-1 font-bold text-primary">{step.title}</p>
-                    <p className="text-body-md text-[#2B3440]">
+                    <p className="mb-1 text-body-lg font-bold text-primary">
+                      {step.title}
+                    </p>
+                    <p className="text-body-md text-[#4A5568]">
                       {step.description}
                     </p>
                   </div>
@@ -61,20 +64,20 @@ export default function ProcessPricing() {
             </div>
           </div>
           <div className="space-y-6 md:space-y-8">
-            <h3 className="border-b border-outline-variant/30 pb-2 text-headline-sm text-primary">
+            <h3 className="border-b-2 border-primary pb-2 text-headline-sm text-primary">
               費用の目安
             </h3>
-            <div className="rounded-xl border border-outline-variant/30 bg-[#E6EDF5] p-6 shadow-sm md:p-8">
+            <div className="rounded-xl border border-outline-variant bg-[#F8FAFC] p-6 shadow-md md:p-8">
               <ul className="mb-6 space-y-4">
                 {pricing.map((item) => (
                   <li
                     key={item.label}
-                    className="flex flex-col gap-1 border-b border-outline-variant/30 pb-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                    className="flex flex-col gap-1 border-b border-outline-variant/50 pb-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                   >
-                    <span className="min-w-0 text-body-md text-primary">
+                    <span className="min-w-0 text-body-md font-medium text-primary">
                       {item.label}
                     </span>
-                    <span className="shrink-0 text-headline-sm text-primary">
+                    <span className="shrink-0 text-headline-sm font-bold text-primary">
                       {item.price}
                     </span>
                   </li>

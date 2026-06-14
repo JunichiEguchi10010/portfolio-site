@@ -28,7 +28,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${notoSansJP.className} min-h-full bg-[#F7FAFC] text-on-surface antialiased`}
+        className={`${notoSansJP.className} min-h-full bg-surface text-on-surface antialiased`}
       >
         {children}
       </body>

@@ -10,7 +10,7 @@ const consultationExamples = [
 ];
 
 const inputClassName =
-  "box-border w-full max-w-full rounded-lg border border-outline-variant/50 bg-white px-4 py-3 text-body-md outline-none transition-colors placeholder:text-[#94a3b8] focus:border-primary focus:ring-0 disabled:cursor-not-allowed disabled:opacity-60";
+  "box-border w-full max-w-full rounded-lg border border-outline-variant bg-[#F8FAFC] px-4 py-3 text-body-md outline-none transition-all placeholder:text-[#94a3b8] focus:border-primary-blue focus:ring-1 focus:ring-primary-blue disabled:cursor-not-allowed disabled:opacity-60";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -68,14 +68,15 @@ export default function Contact() {
   }
 
   return (
-    <section className="bg-white py-12 md:py-20" id="contact">
+    <section className="bg-surface-container py-16 md:py-24" id="contact">
       <div className="mx-auto max-w-container-max px-4 sm:px-6">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-16">
           <div className="flex min-w-0 flex-col justify-start">
-            <h2 className="mb-4 text-display-lg-mobile text-primary md:text-headline-md">
+            <h2 className="text-display-lg-mobile text-primary md:text-headline-md">
               まずは今の業務をお聞かせください
             </h2>
-            <p className="mb-6 text-body-md leading-relaxed text-[#2B3440]">
+            <div className="mt-3 mb-6 h-[2px] w-10 bg-accent-greige" />
+            <p className="mb-6 text-body-md font-medium leading-relaxed text-[#2D3748]">
               「具体的に何を頼めばいいか分からない」「現状を整理してほしい」という段階でも問題ありません。現在の業務内容や、手間に感じている作業を簡単にお聞かせください。
             </p>
             <p className="mb-4 text-label-md font-bold text-primary">
@@ -83,8 +84,8 @@ export default function Contact() {
             </p>
             <ul className="space-y-4 text-body-md text-primary">
               {consultationExamples.map((example) => (
-                <li key={example} className="flex items-start gap-3">
-                  <span className="material-symbols-outlined shrink-0 text-primary">
+                <li key={example} className="flex items-start gap-3 font-medium">
+                  <span className="material-symbols-outlined shrink-0 text-primary-blue">
                     check
                   </span>
                   <span>{example}</span>
@@ -92,14 +93,14 @@ export default function Contact() {
               ))}
             </ul>
           </div>
-          <div className="min-w-0 rounded-xl border border-outline-variant/30 bg-[#F7FAFC] p-5 shadow-sm sm:p-6 md:p-8">
+          <div className="min-w-0 rounded-xl border border-outline-variant bg-white p-5 shadow-lg sm:p-6 md:p-8">
             <form
               className="space-y-5 md:space-y-6"
               onSubmit={handleSubmit}
             >
               <div>
                 <label
-                  className="mb-2 block text-label-md text-primary"
+                  className="mb-2 block text-label-md font-bold text-primary"
                   htmlFor="contact-name"
                 >
                   お名前 / 貴社名
@@ -116,7 +117,7 @@ export default function Contact() {
               </div>
               <div>
                 <label
-                  className="mb-2 block text-label-md text-primary"
+                  className="mb-2 block text-label-md font-bold text-primary"
                   htmlFor="contact-email"
                 >
                   メールアドレス
@@ -133,7 +134,7 @@ export default function Contact() {
               </div>
               <div>
                 <label
-                  className="mb-2 block text-label-md text-primary"
+                  className="mb-2 block text-label-md font-bold text-primary"
                   htmlFor="contact-message"
                 >
                   ご相談内容
@@ -150,7 +151,7 @@ export default function Contact() {
                 />
               </div>
               <button
-                className="w-full max-w-full rounded-full bg-primary py-4 text-label-md font-bold text-on-primary shadow-sm transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full max-w-full rounded-full bg-primary py-4 text-label-md font-bold text-on-primary shadow-md transition-all hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60"
                 disabled={isSubmitting}
                 type="submit"
               >

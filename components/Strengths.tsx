@@ -22,19 +22,16 @@ export default function Strengths() {
 
   return (
     <section
-      className="border-y border-outline-variant/20 py-12 md:py-section-gap-md"
+      className="border-y border-outline-variant/30 bg-white py-14 md:py-24"
       id="strengths"
-      style={{
-        background:
-          "linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(238, 243, 248) 100%)",
-      }}
     >
       <div className="mx-auto max-w-container-max px-4 sm:px-6">
-        <div className="mb-8 text-center md:mb-12">
-          <h2 className="mb-3 text-display-lg-mobile text-primary md:text-headline-md">
+        <div className="mb-10 text-center md:mb-12">
+          <h2 className="text-display-lg-mobile text-primary md:text-headline-md">
             私の強み
           </h2>
-          <p className="mx-auto max-w-2xl text-body-md text-[#2B3440]">
+          <div className="mx-auto mt-3 mb-6 h-[2px] w-10 bg-accent-greige" />
+          <p className="mx-auto max-w-2xl text-body-md font-medium text-[#2D3748]">
             20年のキャリアで培った現場感覚と構造化スキルで、実効性のある改善を提案します。
           </p>
         </div>
@@ -42,15 +39,15 @@ export default function Strengths() {
           {cards.map((card) => (
             <div
               key={card.title}
-              className="flex h-full flex-col rounded-xl border border-outline-variant/30 bg-white p-6 shadow-sm transition-shadow hover:shadow-md md:p-8"
+              className="flex h-full flex-col rounded-xl border-2 border-transparent bg-[#F8FAFC] p-6 shadow-sm transition-all hover:border-primary-blue/20 hover:bg-white hover:shadow-md md:p-8"
             >
-              <span className="material-symbols-outlined mb-3 block text-[28px] leading-none text-primary md:mb-4 md:text-[32px]">
+              <span className="material-symbols-outlined mb-3 block text-[28px] leading-none text-primary-blue md:mb-4 md:text-[32px]">
                 {card.icon}
               </span>
               <h3 className="mb-3 text-headline-sm text-primary md:mb-4">
                 {card.title}
               </h3>
-              <p className="flex-1 text-body-md leading-relaxed text-[#2B3440]">
+              <p className="flex-1 text-body-md leading-relaxed text-[#4A5568]">
                 {card.description}
               </p>
             </div>

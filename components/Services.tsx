@@ -40,22 +40,23 @@ export default function Services() {
   ];
 
   return (
-    <section className="bg-white py-12 md:py-section-gap-md" id="services">
+    <section className="bg-surface-container py-14 md:py-24" id="services">
       <div className="mx-auto max-w-container-max px-4 sm:px-6">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-16">
           <div className="min-w-0">
-            <h2 className="mb-6 text-display-lg-mobile text-primary md:mb-8 md:text-headline-md">
+            <h2 className="text-display-lg-mobile text-primary md:text-headline-md">
               提供できること
             </h2>
+            <div className="mt-3 mb-8 h-[2px] w-10 bg-accent-greige" />
             <div className="space-y-8 md:space-y-10">
               {services.map((service) => (
                 <div key={service.title} className="flex gap-4">
-                  <div className="mt-3 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                  <div className="mt-3 h-2 w-2 shrink-0 rounded-full bg-primary-blue" />
                   <div className="min-w-0">
                     <h4 className="mb-2 text-headline-sm text-primary">
                       {service.title}
                     </h4>
-                    <p className="text-body-md text-[#2B3440]">
+                    <p className="text-body-md text-[#2D3748]">
                       {service.description}
                     </p>
                   </div>
@@ -67,10 +68,12 @@ export default function Services() {
             {highlights.map((item) => (
               <div
                 key={item.title}
-                className="rounded-lg border-l-4 border-primary bg-[#F5F7FA] p-5 shadow-sm md:p-6"
+                className="rounded-lg border-l-4 border-primary bg-white p-5 shadow-md md:p-6"
               >
                 <p className="text-headline-sm text-primary">{item.title}</p>
-                <p className="mt-1 text-label-sm text-[#64717D]">{item.label}</p>
+                <p className="mt-1 text-label-sm font-bold tracking-wider text-primary-blue">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>
