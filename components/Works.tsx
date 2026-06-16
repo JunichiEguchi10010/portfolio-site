@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import { works } from "@/data/works";
 
 const previewBarHeights = ["h-[35%]", "h-[52%]", "h-[44%]", "h-[68%]", "h-[78%]"];
@@ -77,6 +80,12 @@ function WorkImage({
 }
 
 export default function Works() {
+  const [openWorkId, setOpenWorkId] = useState<string | null>(works[0]?.id ?? null);
+
+  const toggleWork = (workId: string) => {
+    setOpenWorkId((current) => (current === workId ? null : workId));
+  };
+
   return (
     <section className="bg-white py-14 md:py-24" id="works">
       <div className="mx-auto max-w-container-max px-4 sm:px-6">
@@ -85,72 +94,101 @@ export default function Works() {
         </h2>
         <div className="mt-3 mb-8 h-[2px] w-10 bg-accent-greige md:mb-12" />
         <div className="space-y-3 sm:space-y-4">
-          {works.map((work, index) => (
-            <details
-              className="group rounded-xl border border-outline-variant bg-[#F8FAFC] shadow-sm transition-colors hover:bg-white"
-              key={work.id}
-              name="works-accordion"
-              open={index === 0}
-            >
-              <summary className="flex cursor-pointer list-none flex-col gap-4 p-5 marker:hidden [&::-webkit-details-marker]:hidden sm:p-6 md:flex-row md:items-center md:justify-between">
-                <div className="min-w-0">
-                  <span className="mb-2 inline-block rounded bg-primary/10 px-2 py-0.5 text-label-sm font-bold text-primary">
-                    {work.category}
-                  </span>
-                  <h3 className="text-headline-sm leading-snug text-primary transition-colors group-open:text-primary-blue">
-                    {work.title}
-                  </h3>
-                  <div className="mt-1">
-                    <span className="text-label-sm font-bold text-primary-blue">
-                      [ {work.result} ]
-                    </span>
-                  </div>
-                </div>
-                <span
-                  aria-hidden="true"
-                  className="material-symbols-outlined shrink-0 self-end text-outline transition-transform duration-300 ease-in-out group-open:rotate-180 motion-reduce:transition-none md:self-auto"
+          {works.map((work) => {
+            const isOpen = openWorkId === work.id;
+            const triggerId = `work-trigger-${work.id}`;
+            const panelId = `work-panel-${work.id}`;
+
+            return (
+              <div
+                className="rounded-xl border border-outline-variant bg-[#F8FAFC] shadow-sm transition-colors hover:bg-white"
+                key={work.id}
+              >
+                <button
+                  aria-controls={panelId}
+                  aria-expanded={isOpen}
+                  className="flex w-full cursor-pointer flex-col gap-4 p-5 text-left sm:p-6 md:flex-row md:items-center md:justify-between"
+                  id={triggerId}
+                  onClick={() => toggleWork(work.id)}
+                  type="button"
                 >
-                  expand_more
-                </span>
-              </summary>
-              <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out group-open:grid-rows-[1fr] motion-reduce:transition-none">
-                <div className="overflow-hidden opacity-0 transition-opacity duration-300 ease-in-out group-open:opacity-100 motion-reduce:transition-none">
-                  <div className="border-t border-outline-variant/40 px-5 pt-4 pb-5 sm:px-6 sm:pb-6">
-                    <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
-                      <div className="w-full shrink-0 md:w-[45%]">
-                        <WorkImage
-                          imageAlt={work.imageAlt}
-                          imageSrc={work.imageSrc}
-                        />
-                      </div>
-                      <div className="flex-1 space-y-4 text-body-md text-[#4A5568]">
-                        {work.descriptions.map((description) => (
-                          <p key={description.label}>
-                            <strong className="text-primary">
-                              【{description.label}】
-                            </strong>
-                            {description.text}
-                          </p>
-                        ))}
-                        {work.technologies?.length ? (
-                          <div className="flex flex-wrap gap-2 pt-1">
-                            {work.technologies.map((technology) => (
-                              <span
-                                className="rounded-full border border-outline-variant bg-white px-3 py-1 text-label-sm font-medium text-primary"
-                                key={technology}
-                              >
-                                {technology}
-                              </span>
-                            ))}
-                          </div>
-                        ) : null}
+                  <div className="min-w-0">
+                    <span className="mb-2 inline-block rounded bg-primary/10 px-2 py-0.5 text-label-sm font-bold text-primary">
+                      {work.category}
+                    </span>
+                    <h3
+                      className={`text-headline-sm leading-snug transition-colors duration-500 ease-in-out motion-reduce:transition-none ${
+                        isOpen ? "text-primary-blue" : "text-primary"
+                      }`}
+                    >
+                      {work.title}
+                    </h3>
+                    <div className="mt-1">
+                      <span className="text-label-sm font-bold text-primary-blue">
+                        [ {work.result} ]
+                      </span>
+                    </div>
+                  </div>
+                  <span
+                    aria-hidden="true"
+                    className={`material-symbols-outlined shrink-0 self-end text-outline transition-transform duration-500 ease-in-out motion-reduce:transition-none md:self-auto ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  >
+                    expand_more
+                  </span>
+                </button>
+                <div
+                  aria-hidden={!isOpen}
+                  aria-labelledby={triggerId}
+                  className={`grid transition-[grid-template-rows] duration-500 ease-in-out motion-reduce:transition-none ${
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                  id={panelId}
+                  role="region"
+                >
+                  <div
+                    className={`overflow-hidden transition-opacity duration-500 ease-in-out motion-reduce:transition-none ${
+                      isOpen ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <div className="border-t border-outline-variant/40 px-5 pt-4 pb-5 sm:px-6 sm:pb-6">
+                      <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
+                        <div className="w-full shrink-0 md:w-[45%]">
+                          <WorkImage
+                            imageAlt={work.imageAlt}
+                            imageSrc={work.imageSrc}
+                          />
+                        </div>
+                        <div className="flex-1 space-y-4 text-body-md text-[#4A5568]">
+                          {work.descriptions.map((description) => (
+                            <p key={description.label}>
+                              <strong className="text-primary">
+                                【{description.label}】
+                              </strong>
+                              {description.text}
+                            </p>
+                          ))}
+                          {work.technologies?.length ? (
+                            <div className="flex flex-wrap gap-2 pt-1">
+                              {work.technologies.map((technology) => (
+                                <span
+                                  className="rounded-full border border-outline-variant bg-white px-3 py-1 text-label-sm font-medium text-primary"
+                                  key={technology}
+                                >
+                                  {technology}
+                                </span>
+                              ))}
+                            </div>
+                          ) : null}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </details>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
