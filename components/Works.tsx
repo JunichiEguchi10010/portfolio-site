@@ -160,14 +160,16 @@ export default function Works() {
                             imageSrc={work.imageSrc}
                           />
                         </div>
-                        <div className="flex-1 space-y-4 text-body-md text-[#4A5568]">
+                        <div className="flex-1 space-y-4">
                           {work.descriptions.map((description) => (
-                            <p key={description.label}>
-                              <strong className="text-primary">
+                            <div key={description.label}>
+                              <p className="text-body-md font-bold text-primary">
                                 【{description.label}】
-                              </strong>
-                              {description.text}
-                            </p>
+                              </p>
+                              <p className="mt-1 text-body-md leading-relaxed text-[#4A5568]">
+                                {description.text}
+                              </p>
+                            </div>
                           ))}
                           {work.technologies?.length ? (
                             <div className="flex flex-wrap gap-2 pt-1">
