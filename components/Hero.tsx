@@ -49,7 +49,7 @@ export default function Hero() {
           </a>
         </div>
       </div>
-      <div className="relative z-0 aspect-[4/3] w-full min-w-0 overflow-hidden rounded-xl border border-outline-variant bg-white shadow-lg lg:-ml-6 lg:max-w-[520px] lg:-translate-y-2 xl:-ml-16 xl:max-w-[560px]">
+      <div className="relative z-0 aspect-[4/3] w-full min-w-0 overflow-hidden rounded-xl border border-outline-variant bg-white shadow-lg lg:mt-10 lg:-ml-6 lg:max-w-[520px] lg:-translate-y-2 xl:-ml-16 xl:max-w-[560px]">
         <Image
           alt="江口純一 実務イメージ"
           className="object-cover"
