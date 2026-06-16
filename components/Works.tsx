@@ -80,7 +80,7 @@ function WorkImage({
 }
 
 export default function Works() {
-  const [openWorkId, setOpenWorkId] = useState<string | null>(works[0]?.id ?? null);
+  const [openWorkId, setOpenWorkId] = useState<string | null>(null);
 
   const toggleWork = (workId: string) => {
     setOpenWorkId((current) => (current === workId ? null : workId));
