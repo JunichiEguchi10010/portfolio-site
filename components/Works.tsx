@@ -108,40 +108,44 @@ export default function Works() {
                 </div>
                 <span
                   aria-hidden="true"
-                  className="material-symbols-outlined shrink-0 self-end text-outline transition-transform group-open:rotate-180 md:self-auto"
+                  className="material-symbols-outlined shrink-0 self-end text-outline transition-transform duration-300 ease-in-out group-open:rotate-180 motion-reduce:transition-none md:self-auto"
                 >
                   expand_more
                 </span>
               </summary>
-              <div className="border-t border-outline-variant/40 px-5 pt-4 pb-5 sm:px-6 sm:pb-6">
-                <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
-                  <div className="w-full shrink-0 md:w-[45%]">
-                    <WorkImage
-                      imageAlt={work.imageAlt}
-                      imageSrc={work.imageSrc}
-                    />
-                  </div>
-                  <div className="flex-1 space-y-4 text-body-md text-[#4A5568]">
-                    {work.descriptions.map((description) => (
-                      <p key={description.label}>
-                        <strong className="text-primary">
-                          【{description.label}】
-                        </strong>
-                        {description.text}
-                      </p>
-                    ))}
-                    {work.technologies?.length ? (
-                      <div className="flex flex-wrap gap-2 pt-1">
-                        {work.technologies.map((technology) => (
-                          <span
-                            className="rounded-full border border-outline-variant bg-white px-3 py-1 text-label-sm font-medium text-primary"
-                            key={technology}
-                          >
-                            {technology}
-                          </span>
-                        ))}
+              <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out group-open:grid-rows-[1fr] motion-reduce:transition-none">
+                <div className="overflow-hidden opacity-0 transition-opacity duration-300 ease-in-out group-open:opacity-100 motion-reduce:transition-none">
+                  <div className="border-t border-outline-variant/40 px-5 pt-4 pb-5 sm:px-6 sm:pb-6">
+                    <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
+                      <div className="w-full shrink-0 md:w-[45%]">
+                        <WorkImage
+                          imageAlt={work.imageAlt}
+                          imageSrc={work.imageSrc}
+                        />
                       </div>
-                    ) : null}
+                      <div className="flex-1 space-y-4 text-body-md text-[#4A5568]">
+                        {work.descriptions.map((description) => (
+                          <p key={description.label}>
+                            <strong className="text-primary">
+                              【{description.label}】
+                            </strong>
+                            {description.text}
+                          </p>
+                        ))}
+                        {work.technologies?.length ? (
+                          <div className="flex flex-wrap gap-2 pt-1">
+                            {work.technologies.map((technology) => (
+                              <span
+                                className="rounded-full border border-outline-variant bg-white px-3 py-1 text-label-sm font-medium text-primary"
+                                key={technology}
+                              >
+                                {technology}
+                              </span>
+                            ))}
+                          </div>
+                        ) : null}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
