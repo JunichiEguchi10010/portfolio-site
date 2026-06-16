@@ -6,15 +6,15 @@ const HERO_IMAGE_URL =
 export default function Hero() {
   return (
     <section className="relative mx-auto grid max-w-container-max items-center gap-8 overflow-visible px-4 pt-10 pb-14 sm:px-6 md:pt-16 md:pb-24 lg:grid-cols-[1.15fr_0.85fr] lg:gap-0 xl:grid-cols-[1.05fr_0.95fr]">
-      <div className="relative z-10 min-w-0 space-y-5 lg:max-w-xl lg:space-y-6 lg:drop-shadow-sm">
+      <div className="relative z-10 min-w-0 space-y-5 lg:max-w-xl lg:space-y-6">
         <div className="flex flex-wrap gap-2">
-          <span className="rounded-lg border border-accent-greige/60 bg-white px-3 py-1 text-label-sm font-medium text-primary shadow-sm">
+          <span className="rounded-lg border border-accent-greige/60 bg-white px-3 py-1 text-label-sm font-medium text-primary">
             業務改善
           </span>
-          <span className="rounded-lg border border-accent-greige/60 bg-white px-3 py-1 text-label-sm font-medium text-primary shadow-sm">
+          <span className="rounded-lg border border-accent-greige/60 bg-white px-3 py-1 text-label-sm font-medium text-primary">
             データ活用
           </span>
-          <span className="rounded-lg border border-accent-greige/60 bg-white px-3 py-1 text-label-sm font-medium text-primary shadow-sm">
+          <span className="rounded-lg border border-accent-greige/60 bg-white px-3 py-1 text-label-sm font-medium text-primary">
             自動化ツール開発
           </span>
         </div>
@@ -36,7 +36,7 @@ export default function Hero() {
         </div>
         <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap sm:gap-4 sm:pt-4 lg:w-fit">
           <a
-            className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-label-md font-bold text-on-primary shadow-md transition-all hover:bg-primary/90 sm:w-auto sm:px-8"
+            className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-label-md font-bold text-on-primary shadow-sm transition-all hover:bg-primary/90 sm:w-auto sm:px-8"
             href="#contact"
           >
             業務の悩みを相談する
