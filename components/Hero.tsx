@@ -19,14 +19,14 @@ export default function Hero() {
           </span>
         </div>
         <div className="relative z-20 min-w-0">
-          <h1 className="text-display-lg-mobile font-bold leading-[1.25] tracking-normal text-primary md:text-display-lg md:tracking-[-0.01em]">
+          <h1 className="text-display-lg-mobile font-bold leading-[1.25] tracking-[0.01em] text-primary md:text-display-lg">
             手作業に追われる日々を
             <br />
             自然に回る業務へ
           </h1>
         </div>
-        <div className="space-y-4">
-          <div className="max-w-lg text-body-md leading-relaxed text-[#2D3748]">
+        <div className="mt-6 space-y-4">
+          <div className="max-w-lg text-body-md leading-[1.9] text-[#2D3748]">
             <p>
               実務を整理し、Excel・CSVまわりの繰り返し作業を
               <br />
