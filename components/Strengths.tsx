@@ -31,8 +31,10 @@ export default function Strengths() {
             私の強み
           </h2>
           <div className="mx-auto mt-3 mb-6 h-[2px] w-10 bg-accent-greige" />
-          <p className="mx-auto max-w-2xl text-body-md font-medium text-[#2D3748]">
-            約20年の営業経験で培った現場感覚と構造化スキルを活かし、実効性のある改善を提案します。
+          <p className="mx-auto max-w-3xl text-body-md font-medium text-[#2D3748]">
+            約20年の営業経験で培った現場感覚と構造化スキルを活かし、
+            <br className="hidden sm:block lg:hidden" />
+            実効性のある改善を提案します。
           </p>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-gutter">
