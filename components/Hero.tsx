@@ -36,7 +36,7 @@ export default function Hero() {
         </div>
         <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap sm:gap-4 sm:pt-4 lg:w-fit">
           <a
-            className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-label-md font-bold text-on-primary shadow-sm transition-all hover:bg-primary/90 sm:w-auto sm:px-8"
+            className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-label-md font-bold text-on-primary shadow-sm transition-all duration-200 ease-out hover:bg-primary/80 hover:shadow-md sm:w-auto sm:px-8"
             href="#contact"
           >
             業務の悩みを相談する
