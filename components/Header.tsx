@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 z-50 flex h-16 w-full items-center border-b border-outline-variant/50 bg-white/95 px-4 shadow-sm backdrop-blur-sm sm:px-6 md:h-[72px]">
+    <header className="fixed top-0 left-0 z-50 flex h-16 w-full items-center border-b border-outline-variant/50 bg-white/90 px-4 shadow-sm backdrop-blur-sm sm:px-6 md:h-[72px]">
       <div className="mx-auto flex w-full max-w-container-max items-center justify-between gap-3">
         <a
           className="min-w-0 flex-1 text-[13px] font-bold leading-snug text-primary sm:text-[15px] md:flex-none md:text-body-lg"
