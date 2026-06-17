@@ -97,7 +97,7 @@ export default function PrivacyPage() {
         </section>
 
         <div className="space-y-2 border-t border-outline-variant/40 pt-8 text-body-md text-[#4A5568]">
-          <p>制定日：2026年○月○日</p>
+          <p>制定日：2026年1月1日</p>
           <p>運営者：江口純一</p>
         </div>
       </article>
