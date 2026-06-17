@@ -34,7 +34,7 @@ export default function Header() {
             ご相談の流れ
           </a>
           <a
-            className="inline-flex items-center rounded-full bg-primary px-6 py-2 text-label-md font-bold text-on-primary shadow-sm transition-all hover:bg-primary/90"
+            className="inline-flex items-center rounded-full bg-primary px-6 py-2 text-label-md font-bold text-on-primary shadow-sm transition-all duration-200 ease-out hover:bg-primary/80 hover:shadow-md"
             href="#contact"
           >
             無料相談

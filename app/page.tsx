@@ -19,9 +19,14 @@ export default function Home() {
         <Works />
         <AutoScreenCaseStudy />
         <ProcessPricing />
-        <Contact />
+        <div
+          className="flex min-h-[calc(100vh-64px)] flex-col bg-surface-container md:min-h-[calc(100vh-72px)]"
+          id="contact"
+        >
+          <Contact />
+          <Footer />
+        </div>
       </main>
-      <Footer />
     </>
   );
 }

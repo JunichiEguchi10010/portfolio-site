@@ -68,7 +68,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="bg-surface-container py-16 md:py-24" id="contact">
+    <section className="flex-1 bg-surface-container py-16 md:py-24">
       <div className="mx-auto max-w-container-max px-4 sm:px-6">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-16">
           <div className="flex min-w-0 flex-col justify-start">
@@ -77,10 +77,14 @@ export default function Contact() {
             </h2>
             <div className="mt-3 mb-6 h-[2px] w-10 bg-accent-greige" />
             <p className="mb-6 text-body-md font-medium leading-relaxed text-[#2D3748]">
-              「具体的に何を頼めばいいか分からない」「現状を整理してほしい」という段階でも問題ありません。現在の業務内容や、手間に感じている作業を簡単にお聞かせください。
+              「何を頼めばいいか分からない」という段階でも問題ありません。
+              <br className="hidden md:block" />
+              日々の業務内容や手間に感じている作業をお聞きし、改善できる
+              <br className="hidden md:block" />
+              ポイントを整理します。
             </p>
             <p className="mb-4 text-label-md font-bold text-primary">
-              たとえば、こんなご相談から対応できます。
+              たとえば、こんなご相談に対応できます。
             </p>
             <ul className="space-y-4 text-body-md text-primary">
               {consultationExamples.map((example) => (
@@ -151,7 +155,7 @@ export default function Contact() {
                 />
               </div>
               <button
-                className="w-full max-w-full rounded-full bg-primary py-4 text-label-md font-bold text-on-primary shadow-md transition-all hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full max-w-full rounded-full bg-primary py-4 text-label-md font-bold text-on-primary shadow-sm transition-all duration-200 ease-out hover:bg-primary/80 hover:shadow-md disabled:cursor-not-allowed disabled:opacity-60"
                 disabled={isSubmitting}
                 type="submit"
               >
