@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="w-full border-t border-outline-variant bg-white px-4 py-8 sm:px-6 md:py-10">
@@ -11,18 +13,12 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-8">
-          <a
+          <Link
             className="text-label-sm font-medium text-primary transition-colors hover:text-primary-blue"
-            href="#"
+            href="/privacy"
           >
             プライバシーポリシー
-          </a>
-          <a
-            className="text-label-sm font-medium text-primary transition-colors hover:text-primary-blue"
-            href="#"
-          >
-            利用規約
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
