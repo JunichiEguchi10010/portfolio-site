@@ -6,7 +6,6 @@ import Hero from "@/components/Hero";
 import ProcessPricing from "@/components/ProcessPricing";
 import Services from "@/components/Services";
 import Strengths from "@/components/Strengths";
-import ViewportDebug from "@/components/ViewportDebug";
 import Works from "@/components/Works";
 
 export default function Home() {
@@ -28,7 +27,6 @@ export default function Home() {
           <Footer />
         </div>
       </main>
-      <ViewportDebug />
     </>
   );
 }
