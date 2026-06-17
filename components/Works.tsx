@@ -15,7 +15,7 @@ function WorkImage({
 }) {
   if (imageSrc) {
     return (
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-outline-variant bg-white shadow-sm">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-outline-variant/60 bg-white shadow-sm">
         <Image
           alt={imageAlt}
           className="object-cover"
@@ -30,7 +30,7 @@ function WorkImage({
   return (
     <div
       aria-label={imageAlt}
-      className="aspect-[4/3] w-full overflow-hidden rounded-lg border border-outline-variant bg-[#EEF3F8] p-4 shadow-sm"
+      className="aspect-[4/3] w-full overflow-hidden rounded-lg border border-outline-variant/60 bg-[#EEF3F8] p-4 shadow-sm"
       role="img"
     >
       <div className="flex h-full flex-col rounded-md border border-outline-variant/70 bg-white/80 p-4">
@@ -160,13 +160,13 @@ export default function Works() {
                             imageSrc={work.imageSrc}
                           />
                         </div>
-                        <div className="flex-1 space-y-4">
+                        <div className="flex-1 space-y-4 md:space-y-3">
                           {work.descriptions.map((description) => (
-                            <div key={description.label}>
+                            <div className="space-y-1" key={description.label}>
                               <p className="text-body-md font-bold text-primary">
                                 【{description.label}】
                               </p>
-                              <p className="mt-1 text-body-md leading-relaxed text-[#4A5568]">
+                              <p className="text-body-md leading-relaxed text-[#4A5568] md:leading-normal">
                                 {description.text}
                               </p>
                             </div>
