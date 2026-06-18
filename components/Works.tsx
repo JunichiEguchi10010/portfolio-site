@@ -152,7 +152,7 @@ export default function Works() {
                       isOpen ? "opacity-100" : "opacity-0"
                     }`}
                   >
-                    <div className="border-t border-outline-variant/40 px-5 pt-4 pb-5 sm:px-6 sm:pb-6">
+                    <div className="border-t border-outline-variant/40 px-5 pt-6 pb-5 sm:px-6 sm:pb-6">
                       <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
                         <div className="w-full shrink-0 md:w-[45%]">
                           <WorkImage
@@ -160,7 +160,7 @@ export default function Works() {
                             imageSrc={work.imageSrc}
                           />
                         </div>
-                        <div className="flex-1 space-y-4 md:space-y-3">
+                        <div className="flex-1 space-y-5">
                           {work.descriptions.map((description) => (
                             <div className="space-y-1" key={description.label}>
                               <p className="text-body-md font-bold text-primary">
@@ -172,7 +172,7 @@ export default function Works() {
                             </div>
                           ))}
                           {work.technologies?.length ? (
-                            <div className="flex flex-wrap gap-2 pt-1">
+                            <div className="flex flex-wrap gap-2 pt-2">
                               {work.technologies.map((technology) => (
                                 <span
                                   className="rounded-full border border-accent-greige bg-white px-3 py-1 text-label-sm font-medium text-primary"

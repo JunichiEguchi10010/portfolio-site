@@ -20,6 +20,7 @@ export const works: WorkItem[] = [
     category: "Data Strategy",
     title: "日次データ取得・ランキング可視化システムの設計",
     result: "意思決定速度の向上",
+    imageSrc: "/images/works/daily-ranking-dashboard.png",
     imageAlt: "日次データ取得・ランキング可視化システムのダッシュボード画面",
     descriptions: [
       {
@@ -39,65 +40,41 @@ export const works: WorkItem[] = [
         text: "毎日の確認作業を効率化し、判断材料を短時間で把握できる状態にしました。",
       },
     ],
-    technologies: ["Python", "Streamlit", "CSV", "Git"],
+    technologies: ["Python", "Streamlit", "pandas", "SQLite", "CSV", "Git"],
   },
   {
-    id: "workflow-automation-tool",
+    id: "inquiry-case-management-dashboard",
     category: "Automation",
-    title: "業務フロー整理と自動化支援ツールの開発",
-    result: "月間40時間の工数削減",
-    imageAlt: "業務フロー整理と自動化支援ツールの画面イメージ",
+    title: "問い合わせ対応・案件管理ダッシュボードの開発",
+    result: "Excel管理から対応漏れを可視化",
+    imageSrc: "/images/works/inquiry-case-management-dashboard.png",
+    imageAlt: "問い合わせ対応・案件管理ダッシュボードの画面イメージ",
     descriptions: [
       {
         label: "課題",
-        text: "手作業や確認作業が分散していると、作業漏れや属人化が起きやすくなります。",
+        text: "問い合わせや営業案件をExcelで管理していると、未対応案件や期限超過に気づきにくく、対応漏れが発生しやすくなります。",
       },
       {
         label: "実装したこと",
-        text: "業務の流れを整理し、繰り返し発生する作業をツール化・自動化できる形に落とし込みました。",
+        text: "Excelの案件一覧を読み込み、対応状況・担当者・期限超過をダッシュボード上で確認できる軽量な管理ツールを作成しました。",
       },
       {
         label: "工夫した点",
-        text: "現場の運用を大きく変えすぎず、日々の業務に自然に組み込める設計を重視しました。",
+        text: "本格CRMではなく、既存のExcel管理を活かしたまま使える構成にし、現場が無理なく導入できるシンプルな画面設計を重視しました。",
       },
       {
         label: "得られた価値",
-        text: "作業時間の削減だけでなく、確認のしやすさや再現性の向上につながる仕組みを作りました。",
+        text: "未対応・期限超過・本日対応の案件を見つけやすくなり、対応漏れの防止と案件状況の把握につながる仕組みを作りました。",
       },
     ],
-    technologies: ["Python", "Excel", "CSV", "Git"],
-  },
-  {
-    id: "data-decision-ui",
-    category: "UI/UX Development",
-    title: "データ集計・判断支援UIの構築",
-    result: "現場の入力負荷 50% 軽減",
-    imageAlt: "データ集計・判断支援UIの表示画面",
-    descriptions: [
-      {
-        label: "課題",
-        text: "データは存在していても、集計や見せ方が整理されていないと、判断材料として活用しづらい状態になります。",
-      },
-      {
-        label: "実装したこと",
-        text: "必要なデータを集計し、比較・確認しやすいUIとして表示できるようにしました。",
-      },
-      {
-        label: "工夫した点",
-        text: "数値を並べるだけでなく、優先度や確認ポイントが分かりやすくなるように設計しました。",
-      },
-      {
-        label: "得られた価値",
-        text: "状況把握から判断までの流れを短縮し、日々の意思決定を支える画面にしました。",
-      },
-    ],
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    technologies: ["Python", "Streamlit", "pandas", "openpyxl", "Excel", "Git"],
   },
   {
     id: "portfolio-lp",
     category: "Web Development",
     title: "個人ポートフォリオLPの設計・実装・公開",
     result: "Next.js / Vercel 公開",
+    imageSrc: "/images/works/portfolio-lp.png",
     imageAlt: "個人ポートフォリオLPの設計・実装・公開",
     descriptions: [
       {
