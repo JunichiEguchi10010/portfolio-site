@@ -152,15 +152,15 @@ export default function Works() {
                       isOpen ? "opacity-100" : "opacity-0"
                     }`}
                   >
-                    <div className="border-t border-outline-variant/40 px-5 pt-6 pb-5 sm:px-6 sm:pb-6">
+                    <div className="border-t border-outline-variant/40 px-5 pt-6 pb-6 sm:px-6">
                       <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
-                        <div className="w-full shrink-0 md:w-[45%]">
+                        <div className="w-full shrink-0 md:w-[45%] md:py-5">
                           <WorkImage
                             imageAlt={work.imageAlt}
                             imageSrc={work.imageSrc}
                           />
                         </div>
-                        <div className="flex-1 space-y-5">
+                        <div className="flex-1 space-y-5 md:py-5">
                           {work.descriptions.map((description) => (
                             <div className="space-y-1" key={description.label}>
                               <p className="text-body-md font-bold text-primary">
