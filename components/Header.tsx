@@ -19,7 +19,7 @@ export default function Header() {
             className="whitespace-nowrap text-label-md font-medium text-[#4A5568] transition-colors hover:text-primary-blue"
             href="#services"
           >
-            提供できること
+            できること
           </a>
           <a
             className="whitespace-nowrap text-label-md font-medium text-[#4A5568] transition-colors hover:text-primary-blue"

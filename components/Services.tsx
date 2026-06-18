@@ -45,7 +45,7 @@ export default function Services() {
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-16">
           <div className="min-w-0">
             <h2 className="text-display-lg-mobile text-primary md:text-headline-md">
-              提供できること
+              できること
             </h2>
             <div className="mt-3 mb-8 h-[2px] w-10 bg-accent-greige" />
             <div className="space-y-8 md:space-y-10">
