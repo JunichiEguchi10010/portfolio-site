@@ -175,7 +175,7 @@ export default function Works() {
                             <div className="flex flex-wrap gap-2 pt-2">
                               {work.technologies.map((technology) => (
                                 <span
-                                  className="rounded-full border border-accent-greige bg-white px-3 py-1 text-label-sm font-medium text-primary"
+                                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-label-sm font-medium text-primary"
                                   key={technology}
                                 >
                                   {technology}
