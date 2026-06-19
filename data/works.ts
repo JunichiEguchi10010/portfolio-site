@@ -19,7 +19,7 @@ export const works: WorkItem[] = [
   {
     id: "daily-ranking-dashboard",
     category: "Data Strategy",
-    title: "APIデータ取得・ランキング可視化システムの開発",
+    title: "APIデータ可視化システムの開発",
     result: "意思決定速度の向上",
     imageSrc: "/images/works/daily-ranking-dashboard.png",
     imageAlt: "日次データ取得・ランキング可視化システムのダッシュボード画面",
