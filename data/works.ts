@@ -19,7 +19,7 @@ export const works: WorkItem[] = [
   {
     id: "daily-ranking-dashboard",
     category: "Data Strategy",
-    title: "日次データ取得・ランキング可視化システムの設計",
+    title: "APIデータ取得・ランキング可視化システムの開発",
     result: "意思決定速度の向上",
     imageSrc: "/images/works/daily-ranking-dashboard.png",
     imageAlt: "日次データ取得・ランキング可視化システムのダッシュボード画面",
@@ -73,26 +73,26 @@ export const works: WorkItem[] = [
   {
     id: "cleaning-company-core-system-ui",
     category: "Frontend Development",
-    title: "クリーニング会社 基幹システムのUI変更実装",
+    title: "社内業務システムのUI変更実装",
     result: "3名体制でフロントエンド担当",
     confidentialPlaceholder: true,
     imageAlt: "守秘義務により画面画像は非掲載",
     descriptions: [
       {
         label: "担当したこと",
-        text: "3名体制の開発チームにおいて、フロントエンド担当として既存基幹システムのUI変更実装を担当しました。既存のTailwind CSSで構成された画面に対して、指定されたデザイン方針に沿って、各画面のレイアウト、余白、ボタン、フォーム、一覧表示などの見た目を調整しました。Tailwind CSSのユーティリティクラスで対応できる箇所はクラス調整で実装し、対応が難しい箇所は個別にCSSやフロントエンドコードを追加・修正しました。",
+        text: "3名体制の開発チームで、クリーニング業向け社内業務システムのフロントエンドUI変更実装を担当しました。既存のTailwind CSS画面を、新たに指定されたデザインに沿って、レイアウト、余白、ボタン、一覧表示などを修正しました。Tailwind CSSで対応しきれない箇所は、個別にコードを追加・修正しました。",
       },
       {
         label: "チーム体制",
-        text: "フロントエンド担当として参画し、バックエンド担当、統括プログラマと連携しながら実装を進めました。画面側の修正範囲を確認しつつ、既存機能に影響が出ないよう注意してUI変更を行いました。",
+        text: "フロントエンド担当として、バックエンド担当・統括プログラマと連携しながら実装を進めました。",
       },
       {
         label: "工夫した点",
-        text: "既存システムの機能や画面構造を崩さないように、既存コードを確認しながらTailwind CSSのクラスや個別CSSを調整しました。Tailwind CSSだけでは対応しづらい細かな表示調整についても、画面ごとの構造や影響範囲を確認しながら個別に対応しました。また、業務システムとして日常的に使われる画面であるため、余白、視認性、ボタンの分かりやすさ、一覧表示の見やすさを意識して実装しました。",
+        text: "既存の画面構造を崩さないよう、コードを確認しながらTailwind CSSや個別CSSを調整しました。日常的に使われる業務システムのため、余白、視認性、ボタン、一覧表示の見やすさを意識しました。",
       },
       {
         label: "できるようになったこと",
-        text: "実務案件のチーム開発において、既存コードを読みながらフロントエンドUIを変更する経験を積みました。また、Tailwind CSSを中心にしながら、必要に応じて個別CSSやフロントエンドコードも調整し、既存システムの画面を崩さずに変更する実装経験を得ました。",
+        text: "実務案件のチーム開発で、既存コードを読みながらTailwind CSSや個別CSSを調整し、UIを変更する実装経験を積みました。",
       },
     ],
     technologies: [
@@ -108,7 +108,7 @@ export const works: WorkItem[] = [
   {
     id: "portfolio-lp",
     category: "Web Development",
-    title: "個人ポートフォリオLPの設計・実装・公開",
+    title: "ポートフォリオサイトの設計・実装・公開",
     result: "Next.js / Vercel 公開",
     imageSrc: "/images/works/portfolio-lp.png",
     imageAlt: "個人ポートフォリオLPの設計・実装・公開",
