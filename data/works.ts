@@ -10,6 +10,7 @@ export type WorkItem = {
   result: string;
   imageSrc?: string;
   imageAlt: string;
+  confidentialPlaceholder?: boolean;
   descriptions: WorkDescription[];
   technologies?: string[];
 };
@@ -68,6 +69,41 @@ export const works: WorkItem[] = [
       },
     ],
     technologies: ["Python", "Streamlit", "pandas", "openpyxl", "Excel", "Git"],
+  },
+  {
+    id: "cleaning-company-core-system-ui",
+    category: "Frontend Development",
+    title: "クリーニング会社 基幹システムのUI変更実装",
+    result: "3名体制でフロントエンド担当",
+    confidentialPlaceholder: true,
+    imageAlt: "守秘義務により画面画像は非掲載",
+    descriptions: [
+      {
+        label: "担当したこと",
+        text: "3名体制の開発チームにおいて、フロントエンド担当として既存基幹システムのUI変更実装を担当しました。既存のTailwind CSSで構成された画面に対して、指定されたデザイン方針に沿って、各画面のレイアウト、余白、ボタン、フォーム、一覧表示などの見た目を調整しました。Tailwind CSSのユーティリティクラスで対応できる箇所はクラス調整で実装し、対応が難しい箇所は個別にCSSやフロントエンドコードを追加・修正しました。",
+      },
+      {
+        label: "チーム体制",
+        text: "フロントエンド担当として参画し、バックエンド担当、統括プログラマと連携しながら実装を進めました。画面側の修正範囲を確認しつつ、既存機能に影響が出ないよう注意してUI変更を行いました。",
+      },
+      {
+        label: "工夫した点",
+        text: "既存システムの機能や画面構造を崩さないように、既存コードを確認しながらTailwind CSSのクラスや個別CSSを調整しました。Tailwind CSSだけでは対応しづらい細かな表示調整についても、画面ごとの構造や影響範囲を確認しながら個別に対応しました。また、業務システムとして日常的に使われる画面であるため、余白、視認性、ボタンの分かりやすさ、一覧表示の見やすさを意識して実装しました。",
+      },
+      {
+        label: "できるようになったこと",
+        text: "実務案件のチーム開発において、既存コードを読みながらフロントエンドUIを変更する経験を積みました。また、Tailwind CSSを中心にしながら、必要に応じて個別CSSやフロントエンドコードも調整し、既存システムの画面を崩さずに変更する実装経験を得ました。",
+      },
+    ],
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Supabase",
+      "GitHub",
+    ],
   },
   {
     id: "portfolio-lp",

@@ -7,9 +7,11 @@ import { works } from "@/data/works";
 const previewBarHeights = ["h-[35%]", "h-[52%]", "h-[44%]", "h-[68%]", "h-[78%]"];
 
 function WorkImage({
+  confidentialPlaceholder,
   imageAlt,
   imageSrc,
 }: {
+  confidentialPlaceholder?: boolean;
   imageAlt: string;
   imageSrc?: string;
 }) {
@@ -23,6 +25,22 @@ function WorkImage({
           sizes="(max-width: 768px) 100vw, 460px"
           src={imageSrc}
         />
+      </div>
+    );
+  }
+
+  if (confidentialPlaceholder) {
+    return (
+      <div
+        aria-label={imageAlt}
+        className="flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-lg border border-outline-variant/60 bg-primary p-6 shadow-sm"
+        role="img"
+      >
+        <p className="text-center text-body-md leading-relaxed text-on-primary">
+          ※守秘義務の関係上、
+          <br />
+          実際の画面画像は掲載していません
+        </p>
       </div>
     );
   }
@@ -156,6 +174,7 @@ export default function Works() {
                       <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
                         <div className="w-full shrink-0 md:w-[45%] md:py-5">
                           <WorkImage
+                            confidentialPlaceholder={work.confidentialPlaceholder}
                             imageAlt={work.imageAlt}
                             imageSrc={work.imageSrc}
                           />
