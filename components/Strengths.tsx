@@ -8,9 +8,9 @@ export default function Strengths() {
     },
     {
       icon: "account_tree",
-      title: "複雑な業務を整理する構造化力",
+      title: "業務の流れを整理する力",
       description:
-        "業務や情報の流れを整理し、曖昧な課題を言語化して、改善できる形へ落とし込みます。",
+        "複雑になりがちな業務や情報の流れを整理し、どこを改善すべきかを分かりやすく言語化します。",
     },
     {
       icon: "insights",
@@ -32,7 +32,7 @@ export default function Strengths() {
           </h2>
           <div className="mx-auto mt-3 mb-6 h-[2px] w-10 bg-accent-greige" />
           <p className="mx-auto max-w-3xl text-body-md font-medium text-[#2D3748]">
-            約20年の営業経験で培った現場感覚と構造化スキルを活かし、
+            約20年の営業経験で培った現場感覚と洞察力を活かし、
             <br className="hidden sm:block lg:hidden" />
             実効性のある改善を提案します。
           </p>
