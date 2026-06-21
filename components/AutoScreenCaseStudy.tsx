@@ -20,15 +20,13 @@ export default function AutoScreenCaseStudy() {
         <div className="flex flex-col items-stretch gap-8 rounded-xl bg-primary p-6 text-on-primary shadow-2xl sm:p-8 md:flex-row md:items-center md:gap-12 md:p-16">
           <div className="min-w-0 space-y-6 md:w-1/2">
             <span className="inline-block border-2 border-accent-greige px-3 py-1 text-label-md font-bold text-accent-greige">
-              Case Study: AUTO_SCREEN
+              Engineering Showcase
             </span>
             <h2 className="text-display-lg-mobile leading-tight md:text-display-lg">
-              実務に即したデータを、
-              <br />
-              日々の判断に使える形へ。
+              日々の業務を、もっと扱いやすく。
             </h2>
             <p className="text-body-md leading-relaxed text-slate-300">
-              AUTO_SCREENは、日次データの取得、指標計算、ランキング生成、初動感知、UI表示までを一貫して行う自作システムです。単なる一覧表ではなく、毎日の確認作業や判断を支援するために、見やすさと運用しやすさを重視して改善を続けています。
+              自作の運用支援アプリ「AUTO_SCREEN」は、データ取得から可視化、初動検知までを一つにまとめた、“毎日の判断を支えるためのツール”です。実務で使い続けられるよう、機能とUIを丁寧に磨いています。
             </p>
             <div className="grid grid-cols-1 gap-y-3 pt-2 md:grid-cols-2 md:gap-x-6 md:pt-4">
               {features.map((feature) => (
