@@ -99,6 +99,7 @@ export const works: WorkItem[] = [
       "React",
       "Next.js",
       "TypeScript",
+      "Zod",
       "Tailwind CSS",
       "shadcn/ui",
       "Supabase",
