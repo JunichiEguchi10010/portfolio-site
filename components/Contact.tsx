@@ -76,7 +76,7 @@ export default function Contact() {
               まずは今の業務をお聞かせください
             </h2>
             <div className="mt-3 mb-6 h-[2px] w-10 bg-accent-greige" />
-            <p className="mb-6 text-body-md font-medium leading-relaxed text-[#2D3748]">
+            <p className="mb-10 text-section-lead text-[#2D3748]">
               「何を頼めばいいか分からない」という段階でも問題ありません。
               <br className="hidden md:block" />
               日々の業務内容や手間に感じている作業をお聞きし、改善できる

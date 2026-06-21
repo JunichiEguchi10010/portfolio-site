@@ -34,7 +34,7 @@ export default function ProcessPricing() {
             ご相談から導入まで
           </h2>
           <div className="mx-auto mt-3 mb-6 h-[2px] w-10 bg-accent-greige" />
-          <p className="mx-auto max-w-2xl text-body-md font-medium text-[#2D3748]">
+          <p className="mx-auto max-w-2xl text-section-lead text-[#2D3748]">
             現在の業務内容や手作業の流れをお聞きし、改善できる部分を一緒に整理します。
             <br className="hidden sm:inline" />
             必要なところから、小さく仕組みにしていきます。
