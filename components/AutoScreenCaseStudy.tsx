@@ -23,7 +23,7 @@ export default function AutoScreenCaseStudy() {
               Engineering Showcase
             </span>
             <h2 className="text-display-lg-mobile leading-tight md:text-display-lg">
-              日々の業務を、もっと扱いやすく。
+              日々の業務をもっと扱いやすく。
             </h2>
             <p className="text-body-md leading-relaxed text-slate-300">
               自作の運用支援アプリ「AUTO_SCREEN」は、データ取得から可視化、初動検知までを一つにまとめた、“毎日の判断を支えるためのツール”です。実務で使い続けられるよう、機能とUIを丁寧に磨いています。
