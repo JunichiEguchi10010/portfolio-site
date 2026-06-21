@@ -54,7 +54,7 @@ export default function Header() {
         </button>
       </div>
       <div
-        className={`border-t border-outline-variant/40 bg-white/95 backdrop-blur-sm md:hidden ${
+        className={`border-t border-outline-variant/40 md:hidden ${
           isMenuOpen ? "block" : "hidden"
         }`}
         id="mobile-nav"

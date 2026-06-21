@@ -19,8 +19,8 @@ export default function Hero() {
           </span>
         </div>
         <div className="relative z-20 min-w-0">
-          <h1 className="text-display-lg-mobile font-bold leading-[1.25] tracking-[0.01em] text-primary md:text-display-lg">
-            手作業に追われる日々を
+          <h1 className="text-display-lg-mobile font-bold leading-[1.25] tracking-[0.01em] text-primary max-md:text-[clamp(24px,7.5vw,28px)] md:text-display-lg">
+            <span className="max-md:whitespace-nowrap">手作業に追われる日々を</span>
             <br />
             自然に回る業務へ
           </h1>
@@ -28,7 +28,11 @@ export default function Hero() {
         <div className="mt-6 space-y-4">
           <div className="max-w-lg text-body-md leading-[1.9] text-[#2D3748]">
             <p>
-              実務を整理し、Excel・CSVまわりの繰り返し作業を
+              実務を整理し、
+              <br className="md:hidden" />
+              <span className="max-md:whitespace-nowrap">
+                Excel・CSVまわりの繰り返し作業を
+              </span>
               <br />
               無理なく続く“軽い仕組み”に整えます。
             </p>
